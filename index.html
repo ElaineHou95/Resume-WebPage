@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Elaine Hou</title>
+
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/media.css" rel="stylesheet" type="text/css">
+    <link href="css/jquery.fancybox.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="font-awesome/4.6.1/css/font-awesome.min.css">
+    <link href="css/owl.carousel.css" rel="stylesheet" type="text/css">
+    <link href="css/owl.theme.css" rel="stylesheet" type="text/css">
+    <link href="css/animate.css" rel="stylesheet" type="text/css">
+    <link href="css/jpushmenu.css" rel="stylesheet" type="text/css">
+    <script  src="https://code.jquery.com/jquery-1.11.3.js"></script>
+    <script type="text/javascript" src="scripts/pdfobject/pdfobject.js"></script>
+    <script>
+        window.onload = function(){
+            $("#submbtn").click(function sendEmail(){
+                               var name=$("[name='name']").val(),
+                               phone=$("[name='phone']").val(),
+                               message=$("[name='message']").val(),
+                               body="Hello Elaine,"+"%0a%0d"
+                               +"My name is: "+name+"%0a%0d"
+                               +"My phone number is: "+phone+"%0a%0d"
+                               +"Message:"+"%0a%0d"+message;
+                               $("#send").attr("href","mailto:elaine.hou@uwaterloo.ca?body="+body);
+                               document.getElementById("send").click();
+                               });
+        }
+    </script>
+
+    <script type="text/javascript">
+        window.onload = function (){
+            var success = new PDFObject({ url: "Resume",pdfOpenParams:{ scrollbars: '0', toolbar: '0', statusbar: '0'}}).embed("pdf");
+        };
+
+    </script>
+</head>
+<body class="push-body">
+    <header id="main-navigation">
+      <div class="container-fluid">
+        <div class="row">
+    <!--      <div class="col-md-12"> <a href="#" class="navbar-brand pull-right"></a>-->
+    <!--        <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left"> <a href="#" class="push_nav_brand">Alex Mia</a>-->
+              <ul class="push_nav">
+                <li><a class="active scroll" href="#home">Home</a></li>
+                <li><a class="scroll" href="#aboutme">About Me</a></li>
+                <li><a class="scroll" href="#mywork">My Work</a></li>
+                <li><a class="scroll" href="#contactme">Contact ME</a></li>
+              </ul>
+    <!--        </nav>-->
+    <!--      </div>-->
+        </div>
+      </div>
+    </header>
+<!--<div class="container-fluid">-->
+<!--  <div class="main-button left">-->
+<!--    <button class="toggle-menu menu-left push-body"> <span></span> <span></span> <span></span> </button>-->
+<!--  </div>-->
+<!--</div>-->
+
+<!-- Info-->
+<div id="home" class="row section">
+  <div class="container info text-center">
+    <div class="row">
+      <div class="col-xs-12 text-center">
+        <div class="info_detail">
+          <div class="zoom"><img src="images/elaine.jpg" alt="elaine hou">
+            <div class="zoom-overlay"></div>
+          </div>
+          <h3>Elaine Hou</h3>
+          <p>Software Developer</p>
+          <!-- Social Icons -->
+          <div class="icons">
+            <ul>
+              <li><a href="https://www.facebook.com/elaine.hou.58" class="fa fb"><i class="fa fa-fw fa-facebook"></i></a></li>
+              <li><a href="https://www.linkedin.com/in/tianchanghou/" class="fa in"><i class="fa fa-fw fa-linkedin"></i></a></li>
+              <li><a href="https://github.com/ElaineHou95" class="fa pin"><i class="fa fa-fw fa-github"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+<!--    <div class="button"> <a href="#contactme" data-target="contactme" class="btn active scroll">Hire Me</a> <a href="#mywork" data-target="mywork" class="btn scroll">My Work</a> </div>-->
+<div class="button" id="pdf" > <a href="Resume.pdf" class="btn active" >VIEW RESUME</a> </div>
+  </div>
+</div>
+
+<!-- About -->
+<div id="aboutme" class="row section">
+  <div class="container career text-center">
+    <div class="row">
+      <div class="col-xs-12 text-center">
+        <div class="animate fadeInRight">
+          <div class="heading">
+            <h1>Career Timeline</h1>
+            <ul>
+                <li><p>University of Waterloo, Master of Software Engineering, CA</p></li>
+                <li><p>Chongqing University, Bachelor of Software Engineering, CHN</p></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-12 text-center">
+        <div id="text-demo" class="owl-carousel">
+
+			<div class="item text-center">
+				 <h2>Application Development Intern</h2>
+                  <em>China Ocean Shipping Group Company,<span> 2016.07-2016.09</span></em>
+                      <p>Developed an intelligent contact system for the company’s internal usages using Java<br/> Realized the following functions such as listing staff information sorted by department and searching and internal calling between contacts</p>
+    		</div>
+		<div class="item text-center">
+				<h2>Part-time Web Development Assistant</h2>
+                  <em>Centre for Intelligent Antenna and Radio Systems (CIARS),<span> 2018.04-2018.06</span></em>
+                      <p>Collected and proofread the information of papers published by staff in CIARS<br/>Transferred the content from old website to the new one </p>
+           </div>
+        <div class="item text-center">
+            <h2>Part-time UI Developer</h2>
+            <em>WATonomous,<span> 2018.05-2018.07</span></em>
+                <p>Designed the views of an auto-drive system by Qt <br/> Implemented multiple views to coordinate with model &amp; controller parts under the Robot Operating System (ROS) </p>
+        </div>
+
+	</div>
+        
+        </div>
+        <div class="col-xs-12 skills text-center">
+          <div class="animate fadeInRight">
+            <div class="heading">
+              <h1> Programming Skills</h1>
+              
+                  <p>Solid knowledge of database, data structures as well as algorithms <br/> Skilled tools: GitHub, Visual Studio, Android Studio, Eclipse, MySQL, Linux, VMWare, Tomcat</p>
+                  
+            </div>
+          </div>
+          <div class="animate bounceInUp">
+            <div class="circle">
+              <div class="circle_detail">
+                <div class="myStat" data-dimension="250" data-text="70%" data-fontsize="18" data-percent="70" data-fgcolor="#fff"></div>
+                <h3>Python</h3>
+<!--                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut</p>-->
+              </div>
+              <div class="circle_detail">
+                <div class="myStat" data-dimension="250" data-text="70%" data-fontsize="18" data-percent="70" data-fgcolor="#fff"></div>
+                <h3>C/C++</h3>
+<!--                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut</p>-->
+              </div>
+              <div class="circle_detail active">
+                <div class="myStat" data-dimension="250" data-text="65%" data-fontsize="18" data-percent="65" data-fgcolor="#fff"></div>
+                <h3>Java</h3>
+<!--                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut</p>-->
+              </div>
+              <div class="circle_detail">
+                <div class="myStat" data-dimension="250" data-text="60%" data-fontsize="18" data-percent="60" data-fgcolor="#fff"></div>
+                <h3>HTML/CSS/JS</h3>
+<!--                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut</p>-->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Work -->
+
+<div id="mywork" class="row section">
+  <div class="container-fluid work text-center">
+    <div class="row">
+      <div class="col-xs-12 text-center">
+        <div class="animate fadeInRight">
+          <div class="head">
+            <h1>My Recent Work</h1>
+          </div>
+        </div>
+        <div class="col-xs-12 work_filter text-center">
+          <div class="row">
+            <div class="animate fadeInLeft">
+              <ul class="breadcrumb">
+                <li><a href="#." class="filter active" data-filter="all">All</a></li>
+                <li><a href="#." class="filter" data-filter=".mb">Mobile Banking</a></li>
+                <li><a href="#." class="filter" data-filter=".cosco">iCOSCO</a></li>
+                <li><a href="#." class="filter" data-filter=".ps">Permission Switch</a></li>
+                <li><a href="#." class="filter" data-filter=".fnc">Fake News Challenge</a></li>
+              </ul>
+            </div>
+            <div class="gallery">
+              <div class="row">
+                <div class="mix mb">
+                  <div class="mix_sec">
+                    <div class="imageContainer"> <img class="sec" src="images/mb1.png" alt="work"> <a class="overlayText fancybox" href="images/mb1.png" data-fancybox-group="gallery">
+                      <h4> Main Menu </h4>
+                      <p>List the provided functions such as account info inquiry, e-transfer, economic news, and seetings.</p>
+                      </a> </div>
+                  </div>
+                </div>
+                <div class="mix mb">
+                    <div class="mix_sec">
+                        <div class="imageContainer"> <img class="sec" src="images/mb2.png" alt="work"> <a class="overlayText fancybox" href="images/mb2.png"  data-fancybox-group="gallery">
+                            <h4> Transfer Funds </h4>
+                            <p>You can transfer funds between your own accounts or to other's accounts.<br/> Click the underlined word to add contact.</p>
+                        </a> </div>
+                    </div>
+                </div>
+                <div class="mix mb">
+                    <div class="mix_sec">
+                        <div class="imageContainer"> <img class="sec" src="images/mb3.png" alt="work"> <a class="overlayText fancybox" href="images/mb3.png"  data-fancybox-group="gallery">
+                            <h4> Password Reset </h4>
+                            <p>One of the setting views. <br/>First Enter your old password, then type in the new one twice in oder to confirm.</p>
+                        </a> </div>
+                    </div>
+                </div>
+                <div class="mix cosco">
+                  <div class="mix_sec">
+                    <div class="imageContainer"> <img class="sec" src="images/cosco1.png" alt="work"> <a class="overlayText fancybox" href="images/cosco1.png" data-fancybox-group="gallery">
+                      <h4> Branch Company List </h4>
+                      <p>Select the branch you want to find or search staff directly.</p>
+                      </a> </div>
+                  </div>
+                </div>
+
+                <div class="mix cosco">
+                  <div class="mix_sec">
+                    <div class="imageContainer"> <img class="sec" src="images/cosco2.png" alt="work"> <a class="overlayText fancybox" href="images/cosco2.png"  data-fancybox-group="gallery">
+                      <h4> Department List </h4>
+                      <p>Select the department you want to find or search staff directly.</p>
+                      </a> </div>
+                  </div>
+                </div>
+                <div class="mix cosco">
+                    <div class="mix_sec">
+                        <div class="imageContainer"> <img class="sec" src="images/cosco3.png" alt="work"> <a class="overlayText fancybox" href="images/cosco3.png"  data-fancybox-group="gallery">
+                            <h4> Staff Info</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
+                        </a> </div>
+                    </div>
+                </div>
+                <div class="mix ps">
+                  <div class="mix_sec">
+                    <div class="imageContainer"> <img class="sec" src="images/ps1.png" alt="work"> <a class="overlayText fancybox" href="images/ps1.png" data-fancybox-group="gallery">
+                      <h4> List of Third Party APPs </h4>
+                      <p>Detect all the installed third party applications and list them with their names and icons.</p>
+                      </a> </div>
+                  </div>
+                </div>
+                <div class="mix ps">
+                  <div class="mix_sec">
+                    <div class="imageContainer"> <img class="sec" src="images/ps2.png" alt="work"> <a class="overlayText fancybox" href="images/ps2.png"  data-fancybox-group="gallery">
+                      <h4> Instructions </h4>
+                      <p>The dialog view shows 3 steps to use the APP.</p>
+                      </a> </div>
+                  </div>
+                </div>
+                <div class="mix ps">
+                    <div class="mix_sec">
+                        <div class="imageContainer"> <img class="sec" src="images/ps3.png" alt="work"> <a class="overlayText fancybox" href="images/ps3.png"  data-fancybox-group="gallery">
+                            <h4> Permission List </h4>
+                            <p>Jump to this interface after selecting an APP in the list.<br/>You are allowed to switch on or switch off its permissions.</p>
+                        </a> </div>
+                    </div>
+                </div>
+                <div class="mix fnc">
+                  <div class="mix_sec">
+                    <div class="imageContainer"> <img class="sec" src="images/fnc1.png" alt="work"> <a class="overlayText fancybox" href="images/fnc2.png"  data-fancybox-group="gallery">
+                      <h4> FNC Rules </h4>
+                      <p>The goal of this project is to classify the stance of the body text relative to the headline into four categories: Agree, Disagree, Discuss and Unrelated. </p>
+                      </a> </div>
+                  </div>
+                </div>
+                <div class="mix fnc">
+                    <div class="mix_sec">
+                        <div class="imageContainer"> <img class="sec" src="images/fncl.png" alt="work"> <a class="overlayText fancybox" href="images/fncl.png"  data-fancybox-group="gallery">
+                            <h4> Basic LSTM cell structure </h4>
+                            <p>Apply the Batch Normalization Long Short-Term Memory(BN-LSTM) network to train the training dataset.</p>
+                        </a> </div>
+                    </div>
+                </div>
+                <div class="mix fnc">
+                    <div class="mix_sec">
+                        <div class="imageContainer"> <img class="sec" src="images/fnc3.png" alt="work"> <a class="overlayText fancybox" href="images/fnc3.png"  data-fancybox-group="gallery">
+                            <h5> Confusion Matrix of Validation Process</h5>
+                            <p>Evaluate the trained model using validation dataset by the confusion matrix.</p>
+                        </a> </div>
+                    </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- contact me -->
+<div id="contactme" class="row section">
+    <div class="container contact">
+        <div class="row">
+            <div class="col-xs-12 text-center">
+                <div class="animate fadeInRight">
+                    <div class="heading">
+                        <h1>Contact Me</h1>
+                        <p>Seeking for a full-time software engineer opportunity :)</p>
+                    </div>
+                </div>
+                <div class="col-md-7 col-sm-12 col-xs-12 field">
+                    <div class="animate bounceInLeft">
+                        <form>
+                            <div class="user">
+                                <input type="text" name="name" placeholder="Name">
+                                <i class="fa fa-user" aria-hidden="true"></i></div>
+                            <div class="user">
+                                <input type="text" name="phone" placeholder="Phone Number"></li>
+                                <i class="fa fa-phone" aria-hidden="true"></i></div>
+                            <textarea name="message" placeholder="Message here"></textarea>
+                            <input type="submit" id= "submbtn" value="Submit Now" />
+                            <a href="mailto" id="send"></a>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-8 col-xs-12 contact_info">
+                    <div class="animate bounceInRight">
+                        <h3> Get In Touch</h3>
+                        <div class="contact_sec">
+                            <ul>
+                                <li><i class="fa fa-home" aria-hidden="true"></i><span>256 Phillip St, Wateroloo, ON, CA</span></li>
+                                <li><i class="fa fa-phone" aria-hidden="true"></i><span>Phone: (+1) 519 729 2403</span></li>
+                                <li><i class="fa fa-envelope-o" aria-hidden="true"></i><span>Email: elaine.hou@uwaterloo.ca</span></li>
+                            </ul>
+                        </div>
+                        <!-- Social Icons -->
+                        <div class="contact_icons">
+                            <ul>
+                                <li><a href="https://www.facebook.com/elaine.hou.58" class="fa fb"><i class="fa fa-fw fa-facebook"></i></a></li>
+                                <li><a href="https://www.linkedin.com/in/tianchanghou/" class="fa in"><i class="fa fa-fw fa-linkedin"></i></a></li>
+                                <li><a href="https://github.com/ElaineHou95" class="fa pin"><i class="fa fa-fw fa-github"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 footer text-center">
+                    <div class="animate fadeInLeft">
+                        <p> </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<a href="#." class="cd-top">TOP</a>
+<!--JS File-->
+
+<script type="text/javascript" src="js/jquery-2.2.3.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/jquery.circliful.min.js"></script>
+<script type="text/javascript" src="js/jquery.mixitup.min.js"></script>
+<script type="text/javascript" src="js/jquery.fancybox.js"></script>
+<!--<script type="text/javascript" src="js/waypoints.js"></script>-->
+<script type="text/javascript" src="js/jquery.appear.js"></script>
+<!--<script type="text/javascript" src="js/jpushmenu.js"></script>-->
+<script type="text/javascript" src="js/owl.carousel.js"></script>
+<script type="text/javascript" src="js/functions.js"></script>
+</body>
+</html>
