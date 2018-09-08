@@ -17,29 +17,8 @@
     <link href="css/jpushmenu.css" rel="stylesheet" type="text/css">
     <script  src="https://code.jquery.com/jquery-1.11.3.js"></script>
     <script type="text/javascript" src="scripts/pdfobject/pdfobject.js"></script>
-    <script>
-        window.onload = function(){
-            $("#submbtn").click(function sendEmail(){
-                               var name=$("[name='name']").val(),
-                               phone=$("[name='phone']").val(),
-                               message=$("[name='message']").val(),
-                               body="Hello Elaine,"+"%0a%0d"
-                               +"My name is: "+name+"%0a%0d"
-                               +"My phone number is: "+phone+"%0a%0d"
-                               +"Message:"+"%0a%0d"+message;
-                               $("#send").attr("href","mailto:elaine.hou@uwaterloo.ca?body="+body);
-                               document.getElementById("send").click();
-                               });
-        }
-    </script>
-
-    <script type="text/javascript">
-        window.onload = function (){
-            var success = new PDFObject({ url: "Resume",pdfOpenParams:{ scrollbars: '0', toolbar: '0', statusbar: '0'}}).embed("pdf");
-        };
-
-    </script>
 </head>
+	
 <body class="push-body">
     <header id="main-navigation">
       <div class="container-fluid">
@@ -359,9 +338,7 @@
 <script type="text/javascript" src="js/jquery.circliful.min.js"></script>
 <script type="text/javascript" src="js/jquery.mixitup.min.js"></script>
 <script type="text/javascript" src="js/jquery.fancybox.js"></script>
-<!--<script type="text/javascript" src="js/waypoints.js"></script>-->
 <script type="text/javascript" src="js/jquery.appear.js"></script>
-<!--<script type="text/javascript" src="js/jpushmenu.js"></script>-->
 <script type="text/javascript" src="js/owl.carousel.js"></script>
 <script type="text/javascript" src="js/functions.js"></script>
 </body>
