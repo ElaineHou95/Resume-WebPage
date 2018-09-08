@@ -1,3 +1,23 @@
+
+window.onload = function (){
+var success = new PDFObject({ url: "Resume.pdf",pdfOpenParams:{ scrollbars: '0', toolbar: '0', statusbar: '0'}}).embed("pdf");
+};
+
+window.onload = function(){
+$("#subm").click(function sendEmail(){
+                   var name=$("[name='name']").val(),
+                   phone=$("[name='phone']").val(),
+                   message=$("[name='message']").val(),
+                   body="Hello Elaine,"+"%0a%0d"
+                   +"My name is: "+name+"%0a%0d"
+                   +"My phone number is: "+phone+"%0a%0d"
+                   +"Message:"+"%0a%0d"+message;
+                   $("#send").attr("href","mailto:elaine.hou@uwaterloo.ca?body="+body);
+                   document.getElementById("send").click();
+                   });
+};
+
+
 jQuery(function($){ "use strict";
 
 
@@ -97,7 +117,5 @@ $('.push_nav li a').on('click', function(){
 	if(screen.width <720 ){ 
  $('div, img, input, textarea, button, a').removeClass('animate'); // to remove transition
  }
-       window.onload = function (){
-       var success = new PDFObject({ url: "Resume.pdf",pdfOpenParams:{ scrollbars: '0', toolbar: '0', statusbar: '0'}}).embed("pdf");
-       };
+		   
 });
